@@ -1,5 +1,5 @@
 local webhook = "INSERT WEBHOOK HERE"
-local auto = true
+local auto = getgenv().auto
 
 local HttpService = game:GetService("HttpService")
 local PlaceID = game.PlaceId
