@@ -1,4 +1,4 @@
-local webhook = "INSERT WEBHOOK HERE"
+local webhook = getgenv().webhook
 local auto = getgenv().auto
 
 local HttpService = game:GetService("HttpService")
