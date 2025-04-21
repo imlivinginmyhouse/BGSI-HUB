@@ -1,6 +1,6 @@
 local webhook = getgenv().webhook
-
 local HttpService = game:GetService("HttpService")
+local queueteleport = queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 local PlaceID = game.PlaceId
 local AllIDs = {}
 local foundAnything = ""
@@ -84,6 +84,8 @@ if egg then
         Body = HttpService:JSONEncode({embeds = embeds})
     })
 else
+    queueteleport("getgenv().webhook = getgenv().webhook")
+    queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/imlivinginmyhouse/BGSI-HUB/refs/heads/main/AutoHop.lua'))()")
     Teleport()
 end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IdiotHub/Scripts/refs/heads/main/BGSI/main.lua"))()
